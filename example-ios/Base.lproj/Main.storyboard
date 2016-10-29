@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WuU-5t-SS6">
-                                <frame key="frameInset" minX="16" minY="80" width="343" height="437"/>
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="493"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-m4-5fT">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -48,6 +48,9 @@
                                             <outletCollection property="gestureRecognizers" destination="fPX-O7-gek" appends="YES" id="fZU-u4-Re2"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="89l-pc-fbB" customClass="RatingControl" customModule="example_ios" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YI2-9i-Mej" secondAttribute="trailing" id="3RU-Au-XVy"/>
