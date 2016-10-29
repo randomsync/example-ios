@@ -40,9 +40,13 @@
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="FvI-nb-0BK">
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FvI-nb-0BK" secondAttribute="height" multiplier="1:1" id="xKR-Z0-VJh"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fPX-O7-gek" appends="YES" id="fZU-u4-Re2"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -61,9 +65,15 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="Y2T-m4-5fT" id="Id9-FC-uCh"/>
                         <outlet property="nameTextField" destination="YI2-9i-Mej" id="VsX-Xt-T8i"/>
+                        <outlet property="photoImageView" destination="FvI-nb-0BK" id="2xX-6H-P86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fPX-O7-gek">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="OhR-3x-CnV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>
