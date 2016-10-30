@@ -9,24 +9,63 @@
 import UIKit
 
 class RatingControl: UIView {
+    // MARK: Properties
+    let spacing = 5
+    let starCount = 5
+    let buttonSize = 44
+
+    var rating = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    var ratingButtons = [UIButton]()
+
 
     // MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        button.backgroundColor = UIColor.red
-        button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchDown)
-        addSubview(button)
+        let emptyStarImage = UIImage(named: "emptyStar")
+        let filledStarImage = UIImage(named: "filledStar")
+
+        for _ in 0..<starCount {
+            let button = UIButton()
+            button.setImage(emptyStarImage, for: .normal)
+            button.setImage(filledStarImage, for: .selected)
+            button.setImage(filledStarImage, for: [.highlighted, .selected])
+            button.adjustsImageWhenHighlighted = false
+
+            button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchDown)
+            ratingButtons += [button]
+            addSubview(button)
+        }
     }
 
+    override func layoutSubviews() {
+        let buttonSize = Int(frame.size.height)
+        var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
+        for (index, button) in ratingButtons.enumerated() {
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
+            button.frame = buttonFrame
+        }
+        updateButtonSelectionStates()
+    }
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 240, height: 44)
+        // let buttonSize = Int(frame.size.height)
+        let width = (buttonSize * starCount) + (spacing * (starCount - 1))
+        return CGSize(width: width, height: buttonSize)
     }
 
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
-        print("Button pressed")
+        rating = ratingButtons.index(of: button)! + 1
+        updateButtonSelectionStates()
     }
 
+    func updateButtonSelectionStates() {
+        for (index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
+        }
+    }
 }

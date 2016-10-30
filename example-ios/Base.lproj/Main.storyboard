@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WuU-5t-SS6">
-                                <frame key="frameInset" minX="16" minY="80" width="343" height="493"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WuU-5t-SS6">
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="451"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2T-m4-5fT">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -33,12 +33,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUz-ZF-93O">
-                                        <state key="normal" title="Set Default Label Text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZF-W3-QwA"/>
-                                        </connections>
-                                    </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="FvI-nb-0BK">
                                         <gestureRecognizers/>
                                         <constraints>
@@ -69,6 +63,7 @@
                         <outlet property="mealNameLabel" destination="Y2T-m4-5fT" id="Id9-FC-uCh"/>
                         <outlet property="nameTextField" destination="YI2-9i-Mej" id="VsX-Xt-T8i"/>
                         <outlet property="photoImageView" destination="FvI-nb-0BK" id="2xX-6H-P86"/>
+                        <outlet property="ratingControl" destination="89l-pc-fbB" id="9lY-ga-nXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
