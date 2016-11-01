@@ -200,6 +200,7 @@
 				TargetAttributes = {
 					B8BEBB1E1DC30623001E5627 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8L9284Q62J;
 						ProvisioningStyle = Automatic;
 					};
 					B8BEBB321DC30623001E5627 = {
@@ -422,9 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8L9284Q62J;
 				INFOPLIST_FILE = "example-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.randomsync.example-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = net.randomsync.foodtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -434,9 +436,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8L9284Q62J;
 				INFOPLIST_FILE = "example-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.randomsync.example-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = net.randomsync.foodtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
